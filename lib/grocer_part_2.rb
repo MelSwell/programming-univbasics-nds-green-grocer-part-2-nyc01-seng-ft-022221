@@ -31,7 +31,7 @@ def checkout(cart, coupons)
   total=0
   consolidated_cart.each do |item|
     if item[:count] > 0
-      total += item[:price]
+      total += item[:price] * item[:count]
     end
   end
   binding.pry
