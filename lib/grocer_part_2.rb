@@ -32,7 +32,6 @@ def checkout(cart, coupons)
   consolidated_cart.each do |item|
     if item[:count] > 0
       total += item[:price]
-      binding.pry
     end
   end
   if total > 100
