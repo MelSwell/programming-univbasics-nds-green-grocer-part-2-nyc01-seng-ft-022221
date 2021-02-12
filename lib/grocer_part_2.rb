@@ -30,6 +30,6 @@ def checkout(cart, coupons)
   apply_clearance(consolidated_cart)
   total=0
   consolidated_cart.ech do |item|
-    total += 
+    total += item[:price]
   end
 end
