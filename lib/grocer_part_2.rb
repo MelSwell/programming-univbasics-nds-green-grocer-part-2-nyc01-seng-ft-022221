@@ -30,6 +30,9 @@ def checkout(cart, coupons)
   apply_clearance(consolidated_cart)
   total=0
   consolidated_cart.ech do |item|
-    total += item[:price]
+    if item[:count] > 0
+      total += item[:price]
+      binding.pry
+    end
   end
 end
